@@ -1,37 +1,24 @@
-// capitalize function 
+// capitalize function / yeniden düzenleme
+
 var str = "";
-var http = require('http');
 var arr = []; 
 var output = ""
 
 function capitalize(str, arr){
-var x = str.length;   
+var x = arr.length;   
 var i= 0;
 
 for(i; i<x; i++){ 
-   if (i== 0)
-     output += str.charAt(0)
-   else if (i==1)
-    output += str.charAt(1).toUpperCase()     
-   else if (i==2)
-    output += str.charAt(2).toUpperCase()
-   else if (i==3)
-    output += str.charAt(3)
-   else if (i==4)
-    output += str.charAt(4)
-   else if (i==5)
-   output += str.charAt(5).toUpperCase()
-   else
-   output+= " "     
+  var a = str.charAt(arr[i]).toUpperCase()  
+  //console.log(a)      
+  output+=a
 }
+console.log(output)
+output=""
 return output
 }
 
 capitalize("abcdef",[1,2,5])  //aBCdeF
-//capitalize("abcdef",[1,2,5,100]) //aBCdeF
-
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end(output); 
-  console.log("listening to server...")
-}).listen(8080);
+capitalize("abcdef",[1,2,5,100]) //aBCdeF
+capitalize("xyzt",[0,3]) // Xyzt
+capitalize("abcdef",[0,3,4]) // AbcDEf
