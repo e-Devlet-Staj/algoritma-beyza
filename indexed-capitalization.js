@@ -1,30 +1,25 @@
-// capitalize function / yeniden düzenleme // 
-
 var str = "";
 var arr = []; 
-var output = ""
+var output = "";
 
 function capitalize(str, arr){
-var x = arr.length;
-var y = str.length;    
-var i,j= 0;
+  var y = str.length;  
 
-for (j;j<y;j++){
-  if (!(arr.includes(j))){
-    var a = str.charAt(j);
-    output+=a
-  }
-  else if (arr.includes(j)){ 
-    var b = str.charAt(j).toUpperCase()  
-    output+=b
-  }
-  else
-      output += " "   
-}
-
-console.log(output)
-output=""
-return output
+  for (var j=0;j<y;j++){
+    if (!(arr.includes(j))){
+      var a = str.charAt(j);
+      output+=a;
+    }
+    else if (arr.includes(j)){ 
+      var b = str.charAt(j).toUpperCase();  
+      output+=b;
+    }
+    else {
+        output += " ";
+    }  
+  } 
+  output="";
+  return output;
 }
 
 capitalize("abcdef",[1,2,5])  //aBCdeF
