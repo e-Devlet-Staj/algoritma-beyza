@@ -11,7 +11,7 @@ function decryptThis(newStr) {
             var asciiChar = String.fromCharCode(matched);  // ascii kod -> char
             var strReplaced = parts[i].replace(matched, asciiChar);
 
-                for(var j = strReplaced.length - 1; j > 0; j--) {
+                for(var j = strReplaced.length-1; j > 0; j--) {
                     newString += strReplaced[j];        
                 } 
 
