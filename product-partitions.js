@@ -79,7 +79,7 @@ function prod_int_part(product) {
     partitionArr.push(productParts[productParts.length-1]);  
     return [partitionArr.length, dividedNum];
 }
-console.log(prod_int_part(17))
-console.log(prod_int_part(60))
-console.log(prod_int_part(54))
-console.log(prod_int_part(44))
+prod_int_part(17)
+prod_int_part(60)
+prod_int_part(54)
+prod_int_part(44)
